@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(to bottom, #000000 0%, #1a0033 100%);
+    color: #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    margin-bottom: 15px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.score, .lives, .level {
+    background: rgba(0, 255, 0, 0.1);
+    padding: 10px 20px;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+}
+
+#gameCanvas {
+    background: #000;
+    border: 3px solid #00ff00;
+    box-shadow: 0 0 20px #00ff00;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.controls {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 255, 0, 0.05);
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+}
+
+.controls p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.game-over, .pause-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.95);
+    border: 3px solid #ff0000;
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #ff0000;
+    z-index: 1000;
+}
+
+.pause-screen {
+    border-color: #ffff00;
+    box-shadow: 0 0 30px #ffff00;
+}
+
+.pause-screen h2 {
+    color: #ffff00;
+    text-shadow: 0 0 10px #ffff00;
+}
+
+.game-over h2, .pause-screen h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.game-over h2 {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.game-over p, .pause-screen p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .stats {
+        font-size: 1em;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .score, .lives, .level {
+        padding: 8px 15px;
+    }
+
+    .controls {
+        font-size: 0.9em;
+    }
+}
