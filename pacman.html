@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man</title>
+    <link rel="stylesheet" href="pacman.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>PAC-MAN</h1>
+            <div class="stats">
+                <div class="score-display">Score: <span id="score">0</span></div>
+                <div class="lives-display">
+                    Lives: <span id="lives-container"></span>
+                </div>
+                <div class="level-display">Level: <span id="level">1</span></div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="controls">
+            <p><strong>Controls:</strong></p>
+            <p>Arrow Keys or WASD: Move Pac-Man</p>
+            <p>P: Pause</p>
+            <p>R: Restart (when game over)</p>
+        </div>
+
+        <div id="gameOverScreen" class="overlay hidden">
+            <h2>GAME OVER</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <p>Press R to Restart</p>
+        </div>
+
+        <div id="winScreen" class="overlay hidden">
+            <h2>LEVEL COMPLETE!</h2>
+            <p>Score: <span id="levelScore">0</span></p>
+            <p>Loading next level...</p>
+        </div>
+
+        <div id="pauseScreen" class="overlay hidden">
+            <h2>PAUSED</h2>
+            <p>Press P to Resume</p>
+        </div>
+
+        <div id="readyScreen" class="overlay">
+            <h2 class="ready-text">READY!</h2>
+        </div>
+    </div>
+
+    <script src="pacman.js"></script>
+</body>
+</html>
